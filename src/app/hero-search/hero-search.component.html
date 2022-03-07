@@ -1,0 +1,13 @@
+<div id="search-component" class="margin-vertical">
+  <div class = "text-center" >
+      <label for="search-box">Hero Search</label>
+      <input #searchBox class = "center-block" id="search-box" type = "search" (input)="search(searchBox.value)" />
+    <ul class="search-result">
+      <li *ngFor="let hero of heroes$ | async">
+        <a routerLink="/hero/details/{{hero.id}}">
+          {{hero.name}}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

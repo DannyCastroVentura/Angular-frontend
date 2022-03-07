@@ -1,0 +1,32 @@
+<div *ngIf="hero" class="center">
+
+    <mat-card class = "card"  >
+      <h1 class = "text-center" style = "margin-bottom: 0px;" >{{ hero.id }} - {{ hero.name }} </h1>
+      <div class="p-4 center">
+        <table class = "text-center" >
+          <tr>
+            <td>Health points:</td>
+            <td><mat-slider class = "sliderHp" min="1" [max]="maxHp" step="1" [value]="hero.hp" aria-label="unit(s)" style = "pointer-events: none;" ></mat-slider></td>
+            <td>{{ hero.hp }} hp</td>
+          </tr>
+          <tr>
+            <td>Atack damage:</td>
+            <td><mat-slider class = "sliderAd" min="1" [max]="maxAd" step="1" [value]="hero.ad" aria-label="unit(s)" style = "pointer-events: none;"></mat-slider></td>
+            <td> {{ hero.ad }} ad</td>
+          </tr>
+          <tr>
+            <td>Atack speed:</td>
+            <td><mat-slider class = "sliderAs" min="0.1" [max]="maxAs" step="0.1" [value]="hero.as" aria-label="unit(s)" style = "pointer-events: none;"></mat-slider></td>
+            <td>{{ hero.as }} a/s</td>
+          </tr>
+        </table>
+         
+         
+
+      </div>
+      <div class="text-center">
+        <button mat-raised-button (click)="goBack()">Go back</button> &nbsp;
+        <button mat-raised-button routerLink="/hero/edit/{{hero.id}}" >Edit</button>
+      </div>
+    </mat-card>
+  </div>

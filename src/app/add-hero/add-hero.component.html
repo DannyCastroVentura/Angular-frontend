@@ -1,0 +1,32 @@
+<div class="center">
+    <mat-card class="card">
+        <h2 class="text-center">Add new hero</h2>
+        <form class="form-group"
+            (submit)="add();">
+            <mat-form-field class="w-100" appearance="fill">
+                <mat-label>Name:</mat-label>
+                <input matInput name = "name" [(ngModel)]="heroName" required>
+            </mat-form-field>
+            <mat-form-field class="w-100" appearance="fill">
+                <mat-label>Health points:</mat-label>
+                <input matInput name = "hp" [(ngModel)]="heroHp" required type="number">
+            </mat-form-field>
+            <mat-form-field class="w-100" appearance="fill">
+                <mat-label>Atack damage:</mat-label>
+                <input matInput name = "ad" [(ngModel)]="heroAd" required type="number">
+            </mat-form-field>
+            <mat-form-field class="w-100" appearance="fill">
+                <mat-label>Atack speed:</mat-label>
+                <input matInput name = "as" [(ngModel)]="heroAs" required type="number">
+            </mat-form-field>
+            <div class="center">
+                <button mat-raised-button class="add-button" type="submit">
+                    Confirm
+                </button>
+            </div>
+        </form>
+        <div class="text-center">
+            <button mat-raised-button (click)="goBack()">Go back</button>
+        </div>
+    </mat-card>
+</div>

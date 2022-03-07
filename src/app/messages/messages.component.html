@@ -1,0 +1,18 @@
+<div class="center">
+    <mat-card class="card">
+        <h2 class="text-center">Messages</h2>
+        <div *ngIf="messageService.messages.length">
+            <div *ngFor='let message of messageService.messages' class="text-center"> 
+                {{message}} 
+            </div>
+            <div class="text-center">
+                <button mat-raised-button class="clear" style="margin-top: 1.5em;"
+                    (click)="messageService.clear()">Clear</button>
+            </div>
+        </div>
+
+        <div *ngIf="messageService.messages.length === 0" class="text-center">
+            No message to be displayed.
+        </div>
+    </mat-card>
+</div>

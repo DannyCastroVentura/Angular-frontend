@@ -1,0 +1,22 @@
+<div class="center">
+    <mat-card class="card">
+        <h2 class="text-center">My Heroes</h2>
+        <div class="center">
+            <ul class="heroes">
+                <li *ngFor="let hero of heroes">
+                    <a routerLink="/hero/details/{{hero.id}}">
+                        <span class="badge" >{{hero.id}}</span><span class="aText">{{hero.name}}</span>
+                    </a>
+                    <button class="delete" mat-button title="delete" (click)="delete(hero)">
+                        <fa-icon class = "iconDelete" [icon]="deleteIcon"></fa-icon>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="text-center">
+            <button mat-raised-button class="add-button" routerLink="/addHero">
+                Add hero
+            </button>
+        </div>
+    </mat-card>
+</div>

@@ -1,0 +1,37 @@
+<div *ngIf="hero" class="center">
+
+  <mat-card class = "card"  >
+    <h2 class="text-center">Hero update</h2>
+    <div class="form-group">
+      
+      <mat-form-field class="w-100" appearance="fill">
+        <mat-label>Id:</mat-label>
+        <input matInput name = "id" [value]="hero.id" required disabled>
+      </mat-form-field>
+
+      <mat-form-field class="w-100" appearance="fill">
+        <mat-label>Hero name:</mat-label>
+        <input matInput name = "name" [(ngModel)]="hero.name" required>
+      </mat-form-field>
+      
+      <mat-form-field class="w-100" appearance="fill">
+        <mat-label>Health points:</mat-label>
+        <input matInput name = "hp" [(ngModel)]="hero.hp" required type = "number">
+      </mat-form-field>
+      
+      <mat-form-field class="w-100" appearance="fill">
+        <mat-label>Atack damage:</mat-label>
+        <input matInput name = "ad" [(ngModel)]="hero.ad" required type = "number">
+      </mat-form-field>
+      
+      <mat-form-field class="w-100" appearance="fill">
+        <mat-label>Atack speed:</mat-label>
+        <input matInput name = "as" [(ngModel)]="hero.as" required type = "number">
+      </mat-form-field>
+    </div>
+    <div class="text-center">
+      <button mat-raised-button (click)="goBack()">Go back</button> &nbsp;
+      <button mat-raised-button (click)="save()">Save</button>
+    </div>
+  </mat-card>
+</div>

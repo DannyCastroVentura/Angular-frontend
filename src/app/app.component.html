@@ -1,0 +1,10 @@
+<h1 class = "center">{{title}}</h1>
+<nav class = "center">
+  <a routerLink="/dashboard">Dashboard</a>
+  <a class="margin-left" routerLink="/heroes">Heroes</a>
+  <a [matBadge]="this.messageService.messages.length" [matBadgeHidden]="this.messageService.messages.length === 0" class="margin-left" routerLink="/messages">Messages</a>
+</nav>
+<div class = "margin-vertical-1">
+  <router-outlet></router-outlet>
+</div>
+<app-spinner></app-spinner>

@@ -1,0 +1,96 @@
+/* HeroesComponent's private CSS styles */
+.heroes {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 100vw; /* For 100% screen width */
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: .5rem;
+  margin: 1rem 0;
+  box-sizing: border-box;
+}
+
+.heroes li {
+  position: relative;
+  cursor: pointer;
+}
+
+.heroes li:hover {
+  left: .1em;
+}
+
+.heroes a {
+  color: #333;
+  text-decoration: none;
+  background-color: #EEE;
+  margin: .5em 0;
+  padding: .3em 0;  
+  height: 3em;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+}
+
+.heroes a:hover {
+  color: #2c3a41;
+  background-color: #e6e6e6;
+}
+
+.heroes a:active {
+  background-color: #525252;
+  color: #fafafa;
+}
+
+.heroes .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.5em;
+  padding-top: 1.15em;
+  height: 3.2em;
+  background-color:#405061;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  min-width: 16px;
+  text-align: right;
+  border-radius: 4px 0 0 4px;
+}
+
+
+button.delete {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 2em;
+  height: 3em;
+  border-radius: 0px;
+}
+
+button.delete:hover {
+  background-color: crimson;
+  color: white;
+}
+
+.iconDelete{  
+  font-size: 16px;
+}
+
+.add-button {
+  padding: .5rem 1.5rem;
+  font-size: 1rem;
+ }
+ 
+.aText{
+  position: absolute;
+  text-align: center;
+  left: 0px;
+  padding-top: 0.5em;
+  right: 0px;
+  margin-left: 2em; 
+  margin-right: 2em; 
+}
